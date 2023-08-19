@@ -91,15 +91,17 @@ function isPalindrome(number) {
     }
 }
 
-// Task 3
-function isKabisa(number){
-    if ((number % 100 !== "00" && number % 4 === 0) || number % 400 === 0) {
-        return true; 
+function isKabisa(year) {
+    if (year % 4 === 0) {
+      if (year % 100 === 0) {
+        return year % 400 === 0;
+      } else {
+        return true;
+      }
     } else {
-        return false;
+      return false;
     }
-}
-
+  }
 
 // Task 4
 function findNegative(array){
